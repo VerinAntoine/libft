@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:17:10 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 19:21:20 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:52:54 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	len;
 	size_t	i;
 
-	if (s1 == NULL || set == NULL)
-		return (NULL);
 	start = 0;
 	while (is_in(set, s1[start]))
 		start++;
