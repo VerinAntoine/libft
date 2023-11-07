@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 19:20:37 by averin            #+#    #+#             */
-/*   Updated: 2023/11/06 11:52:58 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/07 11:28:03 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	count_words(const char *s, char c)
 	size_t	r;
 
 	r = 0;
-	while (*s == c)
+	while (*s && *s == c)
 		s++;
 	if (*s == 0)
 		return (0);
