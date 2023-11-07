@@ -32,4 +32,7 @@ fclean: clean
 
 re: fclean ${NAME}
 
-.PHONY: all clean flcean re bonus
+norm:
+	norminette ${SRCS}
+
+.PHONY: all clean flcean re bonus norm
