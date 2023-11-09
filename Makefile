@@ -19,8 +19,8 @@ ${NAME}: ${OBJS}
 bonus: ${BOBJS} ${OBJS}
 	ar rcs ${NAME} ${BOBJS} ${OBJS}
 
-.c.o:
-	${CC} ${CCFLAGS} -c $< -o ${<:.c=.o}
+%.o: %.c
+	${CC} ${CCFLAGS} -c $< -o $@
 
 all: ${NAME}
 
