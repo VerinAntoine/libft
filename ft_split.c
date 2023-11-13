@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 19:20:37 by averin            #+#    #+#             */
-/*   Updated: 2023/11/07 11:28:03 by antoine          ###   ########.fr       */
+/*   Updated: 2023/11/13 10:47:56 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	**ft_split(const char *s, char c)
 	size_t	next;
 
 	r = (char **) ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	if (r == NULL)
+		return (NULL);
 	k = -1;
 	i = 0;
 	while (s[i] == c && s[i])

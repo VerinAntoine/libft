@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 13:53:57 by averin            #+#    #+#             */
-/*   Updated: 2023/11/07 10:58:01 by antoine          ###   ########.fr       */
+/*   Updated: 2023/11/13 10:48:36 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (slen < start)
 	{
 		r = ft_calloc(1, sizeof(char));
+		if (r == NULL)
+			return (NULL);
 		*r = '\0';
 		return (r);
 	}
