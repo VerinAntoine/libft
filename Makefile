@@ -14,13 +14,17 @@ OBJS	= ${SRCS:.c=.o}
 BOBJS	= ${BSRCS:.c=.o}
 
 ${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+	@echo Creating archive
+	@ar rcs ${NAME} ${OBJS}
+	@echo "\n=== Libft.a created ===\n"
 
 bonus: ${BOBJS} ${OBJS}
-	ar rcs ${NAME} ${BOBJS} ${OBJS}
+	@echo Creating archive with bonus
+	@ar rcs ${NAME} ${BOBJS} ${OBJS}
 
 %.o: %.c
-	${CC} ${CCFLAGS} -c $< -o $@
+	@echo - Compiling $<
+	@${CC} ${CCFLAGS} -c $< -o $@
 
 all: ${NAME}
 
