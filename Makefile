@@ -24,10 +24,12 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 clean:
-	rm -f ${OBJS} ${BOBJS}
+	@echo * Removing files for ${NAME}
+	@rm -f ${OBJS} ${BOBJS}
 
 fclean: clean
-	rm -f ${NAME}
+	@echo * Removing file ${NAME}
+	@rm -f ${NAME}
 
 re: fclean ${NAME}
 
