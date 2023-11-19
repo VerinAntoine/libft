@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 size_t	find_end_line(char *s, size_t len)
 {
@@ -50,5 +50,3 @@ char	*ft_strcat(char *s1, char *s2)
 	free(s2);
 	return (str);
 }
-
-

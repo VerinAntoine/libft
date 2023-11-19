@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #define BUFFER_SIZE 200
 #define TRUE 1
 #define FALSE 0
