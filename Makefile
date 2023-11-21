@@ -13,14 +13,17 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 
 GNL_SRCS	= $(addprefix ft_gnl/, get_next_line.c get_next_line_utils.c)
 PRT_SRCS	= $(addprefix ft_printf/, ft_count_digits.c ft_printf.c print_base.c print_char.c print_hexa.c print_int.c print_str.c print_unsigned_int.c)
-OBJS	= ${SRCS:.c=.o} ${PRT_SRCS:.c=.o} ${GNL_SRCS:.c=.o} 
+OBJS	= $(addprefix obj/, ${SRCS:.c=.o} ${PRT_SRCS:.c=.o} ${GNL_SRCS:.c=.o})
 
 ${NAME}: ${OBJS} 
 	@echo "Creating archive ${NAME}"
 	@ar rcs ${NAME} ${OBJS}
 	@echo "\n=== ${NAME} created ===\n"
 
-%.o: %.c
+obj/%.o: %.c
+	@mkdir -p obj
+	@mkdir -p obj/ft_printf
+	@mkdir -p obj/ft_gnl
 	@echo "- Compiling $<"
 	@${CC} ${CCFLAGS} -c $< -o $@ -I $(INCLDS)
 
