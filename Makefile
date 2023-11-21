@@ -12,7 +12,8 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 			ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 GNL_SRCS	= $(addprefix ft_gnl/, get_next_line.c get_next_line_utils.c)
-PRT_SRCS	= $(addprefix ft_printf/, ft_count_digits.c ft_printf.c print_base.c print_char.c print_hexa.c print_int.c print_str.c print_unsigned_int.c)
+PRT_SRCS	= $(addprefix ft_printf/, ft_count_digits.c ft_printf.c print_base.c print_char.c print_hexa.c print_int.c print_str.c\
+			print_unsigned_int.c ft_putnbr_unsigned_fd.c)
 OBJS	= $(addprefix obj/, ${SRCS:.c=.o} ${PRT_SRCS:.c=.o} ${GNL_SRCS:.c=.o})
 
 ${NAME}: ${OBJS} 
