@@ -6,14 +6,14 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:17:21 by averin            #+#    #+#             */
-/*   Updated: 2023/11/09 13:44:19 by averin           ###   ########.fr       */
+/*   Updated: 2023/12/01 16:08:03 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_int(int i)
+int	print_int(int fd, int i)
 {
-	ft_putnbr_fd(i, 1);
+	ft_putnbr_fd(i, fd);
 	return (ft_count_digits(i));
 }
