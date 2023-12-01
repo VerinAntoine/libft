@@ -49,7 +49,7 @@ static size_t	count_words(const char *s, char c)
 	return (r + 1);
 }
 
-static int	free_split(char **s)
+void	ft_free_split(char **s)
 {
 	size_t	i;
 
@@ -57,17 +57,24 @@ static int	free_split(char **s)
 	while (s[++i] != NULL)
 		free(s[i]);
 	free(s);
-	return (1);
 }
 
 char	**ft_split(const char *s, char c)
+{
+	size_t	size;
+
+	return (ft_size_split(s, c, &size));
+}
+
+char	**ft_size_split(const char *s, char c, size_t *size)
 {
 	char	**r;
 	size_t	i;
 	size_t	k;
 	size_t	next;
 
-	r = (char **) ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	*size = count_words(s, c);
+	r = (char **) ft_calloc(*size + 1, sizeof(char *));
 	if (r == NULL)
 		return (NULL);
 	k = -1;
@@ -78,8 +85,8 @@ char	**ft_split(const char *s, char c)
 	{
 		next = get_next_char_index(s + i, c);
 		r[++k] = ft_substr(s, i, next);
-		if (r[k] == NULL && free_split(r))
-			return (NULL);
+		if (r[k] == NULL)
+			return (ft_free_split(r), NULL);
 		i += next;
 		while (s[i] == c && s[i])
 			i++;

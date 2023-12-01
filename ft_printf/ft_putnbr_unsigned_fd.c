@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 20:14:27 by averin            #+#    #+#             */
-/*   Updated: 2023/11/10 13:20:46 by averin           ###   ########.fr       */
+/*   Updated: 2023/11/21 10:24:08 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int	ft_putnbr_unsigned_base_fd(unsigned long n, char *base, int fd)
 
 void	ft_putnbr_unsigned_fd(unsigned long n, int fd)
 {
-	ft_putnbr_base_fd(n, "0123456789", fd);
+	ft_putnbr_unsigned_base_fd(n, "0123456789", fd);
 }
