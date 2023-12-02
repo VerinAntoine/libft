@@ -6,14 +6,14 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:07:39 by averin            #+#    #+#             */
-/*   Updated: 2023/11/16 09:58:34 by averin           ###   ########.fr       */
+/*   Updated: 2023/12/01 16:07:33 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_char(char c)
+int	print_char(int fd, char c)
 {
-	ft_putchar_fd(c, 1);
+	ft_putchar_fd(c, fd);
 	return (1);
 }

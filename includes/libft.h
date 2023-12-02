@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 09:55:16 by averin            #+#    #+#             */
 /*   Updated: 2023/12/02 23:16:11 by antoine          ###   ########.fr       */
@@ -26,7 +26,11 @@ typedef struct s_list
 }					t_list;
 
 int		ft_printf(const char *s, ...);
+int		ft_dprintf(int fd, const char *s, ...);
 char	*get_next_line(int fd);
+
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_str.c                                        :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 20:08:44 by averin            #+#    #+#             */
-/*   Updated: 2023/12/01 16:08:14 by averin           ###   ########.fr       */
+/*   Created: 2023/12/01 09:43:59 by averin            #+#    #+#             */
+/*   Updated: 2023/12/01 09:44:59 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int	print_str(int fd, char *s)
+int	ft_min(int a, int b)
 {
-	if (s == NULL)
-	{
-		ft_putstr_fd("(null)", fd);
-		return (6);
-	}
-	ft_putstr_fd(s, fd);
-	return (ft_strlen(s));
+	if (a <= b)
+		return (a);
+	return (b);
 }
