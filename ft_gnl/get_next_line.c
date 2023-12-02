@@ -27,7 +27,7 @@ char	*oget_next_line(int fd, char **line)
 	if (*line)
 		free(line);
 	*line = get_next_line(fd);
-	return (*line)
+	return (*line);
 }
 
 char	*get_next_line(int fd)
