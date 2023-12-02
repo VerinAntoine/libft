@@ -22,11 +22,12 @@ static int	is_valid(char *line);
 static int	read_file(int fd, char **buffer);
 static char	*process_buffer(char *buffer);
 
-void	oget_next_line(int fd, char **line)
+char	*oget_next_line(int fd, char **line)
 {
 	if (*line)
 		free(line);
 	*line = get_next_line(fd);
+	return (*line)
 }
 
 char	*get_next_line(int fd)
