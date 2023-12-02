@@ -55,6 +55,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 int		ft_atoi(const char *nptr);
+long	ft_atol(const char *nptr);
 char	*ft_itoa(int n);
 
 void	*ft_memset(void *s, int c, size_t n);
