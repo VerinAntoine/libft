@@ -17,10 +17,17 @@
 
 size_t		find_end_line(char *s, size_t len);
 char		*ft_strcat(char *s1, char *s2);
+void		ft_shift_str(char *s, size_t shift, size_t len);
 static int	is_valid(char *line);
 static int	read_file(int fd, char **buffer);
 static char	*process_buffer(char *buffer);
-static void	ft_shift_str(char *s, size_t shift, size_t len);
+
+void	oget_next_line(int fd, char **line)
+{
+	if (*line)
+		free(line);
+	*line = get_next_line(fd);
+}
 
 char	*get_next_line(int fd)
 {
@@ -83,18 +90,4 @@ static char	*process_buffer(char *buffer)
 	line[i] = '\0';
 	ft_shift_str(buffer, len, BUFFER_SIZE);
 	return (line);
-}
-
-static void	ft_shift_str(char *s, size_t shift, size_t len)
-{
-	size_t	i;
-
-	i = -1;
-	while (++i < len)
-	{
-		if (shift + i >= len)
-			s[i] = '\0';
-		else
-			s[i] = s[shift + i];
-	}
 }

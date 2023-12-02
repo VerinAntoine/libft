@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+void	ft_shift_str(char *s, size_t shift, size_t len)
+{
+	size_t	i;
+
+	i = -1;
+	while (++i < len)
+	{
+		if (shift + i >= len)
+			s[i] = '\0';
+		else
+			s[i] = s[shift + i];
+	}
+}
+
 size_t	find_end_line(char *s, size_t len)
 {
 	size_t	i;
