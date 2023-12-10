@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 19:20:37 by averin            #+#    #+#             */
-/*   Updated: 2023/11/13 10:47:56 by averin           ###   ########.fr       */
+/*   Updated: 2023/12/05 10:10:36 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	get_next_char_index(const char *s, char c)
 	return (i);
 }
 
-static size_t	count_words(const char *s, char c)
+size_t	ft_count_words(const char *s, char c)
 {
 	size_t	r;
 
@@ -73,7 +73,7 @@ char	**ft_size_split(const char *s, char c, size_t *size)
 	size_t	k;
 	size_t	next;
 
-	*size = count_words(s, c);
+	*size = ft_count_words(s, c);
 	r = (char **) ft_calloc(*size + 1, sizeof(char *));
 	if (r == NULL)
 		return (NULL);

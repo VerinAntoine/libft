@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:41:59 by averin            #+#    #+#             */
-/*   Updated: 2023/11/17 10:49:08 by averin           ###   ########.fr       */
+/*   Updated: 2023/12/05 08:56:37 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ static char	*process_buffer(char *buffer);
 
 char	*oget_next_line(int fd, char **line)
 {
-	if (*line)
-		free(*line);
 	*line = get_next_line(fd);
 	return (*line);
 }
