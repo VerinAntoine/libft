@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 20:59:00 by averin            #+#    #+#             */
-/*   Updated: 2023/08/11 14:01:44 by averin           ###   ########.fr       */
+/*   Updated: 2023/12/12 12:58:14 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	if (n == 0)
+		return (0);
+	if (!s1 || !s2)
 		return (0);
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i] && i + 1 < n)
