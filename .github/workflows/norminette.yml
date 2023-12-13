@@ -2,7 +2,7 @@ name: Nominette
 
 on:
   push:
-    branches: ["cicd"]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
