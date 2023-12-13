@@ -20,6 +20,6 @@ jobs:
         python -m pip install --upgrade pip setuptools
         python -m pip install norminette
         
-    - name: Analysing the code with pylint
+    - name: Norminetting
       run: |
         python -m norminette
