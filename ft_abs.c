@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 23:31:41 by antoine           #+#    #+#             */
-/*   Updated: 2023/12/02 23:32:04 by antoine          ###   ########.fr       */
+/*   Updated: 2023/12/13 10:23:41 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,13 @@ int	ft_abs(int n)
 	if (n < 0)
 		return (-n);
 	return (n);
+}
+
+int	ft_sign(int i)
+{
+	if (i < 0)
+		return (-1);
+	else if (i > 0)
+		return (1);
+	return (0);
 }
