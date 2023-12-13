@@ -14,7 +14,7 @@
 
 static size_t	get_next_char_index(const char *s, char c)
 {
-	size_t	i;
+	size_t i;
 
 	i = -1;
 	while (s[++i])
