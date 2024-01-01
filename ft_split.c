@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 19:20:37 by averin            #+#    #+#             */
-/*   Updated: 2023/12/05 10:10:36 by averin           ###   ########.fr       */
+/*   Updated: 2024/01/01 14:20:44 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ size_t	ft_count_words(const char *s, char c)
 	return (r + 1);
 }
 
-void	ft_free_split(char **s)
+void	ft_fsplit(char **s)
 {
 	size_t	i;
 
@@ -86,7 +86,7 @@ char	**ft_size_split(const char *s, char c, size_t *size)
 		next = get_next_char_index(s + i, c);
 		r[++k] = ft_substr(s, i, next);
 		if (r[k] == NULL)
-			return (ft_free_split(r), NULL);
+			return (ft_fsplit(r), NULL);
 		i += next;
 		while (s[i] == c && s[i])
 			i++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 09:55:16 by averin            #+#    #+#             */
-/*   Updated: 2023/12/20 15:08:58 by antoine          ###   ########.fr       */
+/*   Updated: 2024/01/01 14:22:11 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_bzero(void *s, size_t n);
 size_t	ft_count_words(const char *s, char c);
 char	**ft_split(const char *s, char c);
 char	**ft_size_split(const char *s, char c, size_t *size);
-void	ft_free_split(char **s);
+void	ft_fsplit(char **s);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
