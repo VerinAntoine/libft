@@ -6,7 +6,7 @@
 /*   By: averin <averin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 19:20:37 by averin            #+#    #+#             */
-/*   Updated: 2024/01/01 14:20:44 by averin           ###   ########.fr       */
+/*   Updated: 2024/01/02 13:28:11 by averin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	ft_fsplit(char **s)
 {
 	size_t	i;
 
+	if (s == NULL)
+		return ;
 	i = -1;
 	while (s[++i] != NULL)
 		free(s[i]);
